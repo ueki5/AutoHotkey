@@ -5,26 +5,24 @@
 ; 左Fn定義 *
 ; **********
 ; 移動系
-F23 & y::^Home
-F23 & u::Send, {Blind}{Home}
-F23 & j::Send, {Blind}{Left}
-F23 & k::Send, {Blind}{Down}
-F23 & i::Send, {Blind}{Up}
+F23 & h::Send, {Blind}{Left}
+F23 & j::Send, {Blind}{Down}
+F23 & k::Send, {Blind}{Up}
 F23 & l::Send, {Blind}{Right}
+F23 & y::Send, {Blind}{Home}
+F23 & u::Send, {Blind}{PgDn}
+F23 & i::Send, {Blind}{PgUp}
 F23 & o::Send, {Blind}{End}
-F23 & p::^End
-F23 & n::Send, {Blind}{PgDn}
-F23 & /::Send, {Blind}{PgUp}
 
 ; 編集系
 F23 & '::Send, {Blind}{Escape}
 F23 & Space::Send, {Blind}{Enter}
-F23 & h::Send, {Blind}{Backspace}
+F23 & p::Send, {Blind}{Backspace}
 F23 & `;::Send, {Blind}{Del}
 F23 & ]::Send, {Blind}{Ins}
 
 ; その他
-F23 & m::Send, {Blind}{PrintScreen}p
+F23 & m::Send, {Blind}{PrintScreen}
 F23 & ,::Send, {Blind}{ScrollLock}
 
 ; ファンクションキー
