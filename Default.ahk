@@ -1,83 +1,60 @@
-﻿#InstallKeybdHook
-#UseHook
+﻿; **********
+; リマップ  *
+; **********
+; Capslock -> LCtrlはPowerToysで入れ替え
+LWin::LAlt
+AppsKey::LWin
 
 ; **********
 ; 左Fn定義 *
 ; **********
 ; 移動系
-F23 & h::Send, {Blind}{Left}
-F23 & j::Send, {Blind}{Down}
-F23 & k::Send, {Blind}{Up}
-F23 & l::Send, {Blind}{Right}
-F23 & y::Send, {Blind}{Home}
-F23 & u::Send, {Blind}{PgDn}
-F23 & i::Send, {Blind}{PgUp}
-F23 & o::Send, {Blind}{End}
+<!h::Left
+<!j::Down
+<!k::Up
+<!l::Right
+<!y::Home
+<!u::PgDn
+<!i::PgUp
+<!o::End
 
 ; 編集系
-F23 & '::Send, {Blind}{Escape}
-F23 & Space::Send, {Blind}{Enter}
-F23 & p::Send, {Blind}{Backspace}
-F23 & `;::Send, {Blind}{Del}
-F23 & ]::Send, {Blind}{Ins}
+<!Space::Enter
+<!p::Backspace
+<!`;::Del
 
 ; その他
-F23 & m::Send, {Blind}{PrintScreen}
-F23 & ,::Send, {Blind}{ScrollLock}
+<!m::PrintScreen
+<!,::ScrollLock
 
 ; ファンクションキー
-F23 & 1::Send, {Blind}{F1}
-F23 & 2::Send, {Blind}{F2}
-F23 & 3::Send, {Blind}{F3}
-F23 & 4::Send, {Blind}{F4}
-F23 & 5::Send, {Blind}{F5}
-F23 & 6::Send, {Blind}{F6}
-F23 & 7::Send, {Blind}{F7}
-F23 & 8::Send, {Blind}{F8}
-F23 & 9::Send, {Blind}{F9}
-F23 & 0::Send, {Blind}{F10}
-F23 & -::Send, {Blind}{F11}
-F23 & =::Send, {Blind}{F12}
+<!1::F1
+<!2::F2
+<!3::F3
+<!4::F4
+<!5::F5
+<!6::F6
+<!7::F7
+<!8::F8
+<!9::F9
+<!0::F10
+<!-::F11
+<!=::F12
 
 ; CtrlX系
-F23 & a::Send, {Blind}^a
-F23 & c::Send, {Blind}^c
-F23 & s::Send, {Blind}^s
-F23 & v::Send, {Blind}^v
-F23 & x::Send, {Blind}^x
-F23 & z::Send, {Blind}^z
+<!a::^a
+<!c::^c
+<!s::^s
+<!v::^v
+<!x::^x
+<!z::^z
 
 ; モディファイア
-F23 & f::LShift
-F23 & d::LControl
-
-; **********
-; 右Fn定義 *
-; **********
-F24 & 1::Send, {Blind}{F1}
-F24 & 2::Send, {Blind}{F2}
-F24 & 3::Send, {Blind}{F3}
-F24 & 4::Send, {Blind}{F4}
-F24 & 5::Send, {Blind}{F5}
-F24 & 6::Send, {Blind}{F6}
-F24 & 7::Send, {Blind}{F7}
-F24 & 8::Send, {Blind}{F8}
-F24 & 9::Send, {Blind}{F9}
-F24 & 0::Send, {Blind}{F10}
-F24 & -::Send, {Blind}{F11}
-F24 & =::Send, {Blind}{F12}
-
-
-; モディファイア
-F24 & f::RShift
-F24 & d::RControl
-
-; デバッグ用
-Debug_Msg:
-MsgBox You pressed %A_ThisHotkey%.
-Return
+<!f::LShift
+<!d::LControl
 
 ; スクリプト編集・反映・終了
-^!e::Edit
-^!r::Reload
-^!x::ExitApp
+^!e:: Edit
+^!r:: Reload
+;^!s:: Suspend
+^!x:: ExitApp
